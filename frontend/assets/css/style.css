@@ -1,0 +1,257 @@
+/* --- Importando uma fonte moderna do Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Estilo Geral e Tema Escuro --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Gradiente de fundo inspirado no seu protótipo */
+    background: linear-gradient(135deg, #2c3e50, #4a6a8a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ecf0f1;
+    /* Cor de texto principal clara */
+}
+
+.container {
+    background-color: rgba(44, 62, 80, 0.7);
+    /* Container semi-transparente */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    /* Efeito de vidro fosco */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 80%;
+    max-width: 850px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+h1,
+h2 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+p {
+    color: #bdc3c7;
+    /* Cinza claro para parágrafos */
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #95a5a6;
+    margin-top: -10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 1rem 0;
+    border: 1px solid #7f8c8d;
+    background-color: #34495e;
+    color: #ecf0f1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+    color: #7f8c8d;
+}
+
+/* --- Cabeçalho e Navegação --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.score-board {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.navigation-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Botões redondos */
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-btn:disabled {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #6a6a6a;
+    cursor: not-allowed;
+}
+
+#scenario-counter {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* --- Botões Principais (Estilo Protótipo) --- */
+.btn {
+    background-color: #3498db;
+    /* Azul do seu protótipo */
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    /* Azul mais escuro no hover */
+    transform: translateY(-2px);
+    /* Efeito de elevação */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- DESTAQUE PARA A ÁREA DA PERGUNTA --- */
+#question-area {
+    background-color: rgba(0, 0, 0, 0.25);
+    /* Fundo destacado */
+    border: 1px solid rgba(52, 152, 219, 0.5);
+    /* Borda azul sutil */
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+#question-text {
+    font-size: 1.2rem;
+    /* Fonte maior para a pergunta */
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Vídeo e Explicações --- */
+#scenario-video,
+#scenario-image {
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#explanation-area {
+    text-align: left;
+    margin: 1.5rem 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+}
+
+/* --- Estilo do Alerta Personalizado --- */
+#custom-alert-overlay {
+    position: fixed;
+    /* Fica por cima de todo o conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo escuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Garante que fique na frente */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+#custom-alert-overlay:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#custom-alert-box {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+#custom-alert-overlay:not(.hidden) #custom-alert-box {
+    transform: scale(1);
+}
+
+#custom-alert-title {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Cor do título para resposta correta */
+#custom-alert-box.alert-success #custom-alert-title {
+    color: #2ecc71;
+    /* Verde */
+}
+
+/* Cor do título para resposta incorreta */
+#custom-alert-box.alert-error #custom-alert-title {
+    color: #e74c3c;
+    /* Vermelho */
+}
+
+#custom-alert-message {
+    color: #bdc3c7;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Tela Final --- */
+#badge-image {
+    max-width: 150px;
+    margin-top: 1rem;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+}

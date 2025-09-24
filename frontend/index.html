@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCyber Trainer- UnB - PPEE </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="registration-screen">
+            <h1>Bem-vindo ao AutoCyber Trainer - Unb - PPEE </h1>
+            <p>Insira seu nome para começar o treinamento de cibersegurança veicular.</p>
+            <input type="text" id="nickname" placeholder="Digite seu nome">
+            <button id="start-btn" class="btn">Iniciar Treinamento</button>
+        </div>
+
+        <div id="scenario-screen" class="hidden">
+            <div class="header">
+                <h2 id="scenario-title">Título do Cenário</h2>
+                <div class="navigation-controls">
+                    <button id="prev-btn" class="nav-btn">&lt;</button>
+                    <span id="scenario-counter">1 / 5</span>
+                    <button id="next-btn" class="nav-btn">&gt;</button>
+                </div>
+                <div class="score-board">Pontuação: <span id="score">0</span></div>
+            </div>
+
+            <video id="scenario-video" width="100%" controls autoplay muted loop>
+                <source src="" type="video/mp4">
+            </video>
+            <img id="scenario-image" class="hidden" width="100%" src="">
+
+            <div id="explanation-area">
+                <h4>O Ataque:</h4>
+                <p id="attack-explanation"></p>
+                <div id="mitigation-content" class="hidden">
+                    <h4>A Mitigação:</h4>
+                    <p id="mitigation-explanation"></p>
+                </div>
+            </div>
+
+            <button id="show-mitigation-btn" class="btn">Ver Mitigação</button>
+
+            <div id="question-area" class="hidden">
+                <p id="question-text"></p>
+                <button id="true-btn" class="btn">Verdadeiro</button>
+                <button id="false-btn" class="btn">Falso</button>
+            </div>
+        </div>
+
+        <div id="end-screen" class="hidden">
+            <h2>Treinamento Concluído!</h2>
+            <p>Sua pontuação final é: <strong id="final-score"></strong></p>
+            <h3 id="badge-name"></h3>
+            <img id="badge-image" src="" alt="Seu Badge">
+        </div>
+    </div>
+    <div id="custom-alert-overlay" class="hidden">
+        <div id="custom-alert-box">
+            <h3 id="custom-alert-title"></h3>
+            <p id="custom-alert-message"></p>
+            <button id="custom-alert-close-btn" class="btn">OK</button>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+<script src="assets/js/app.js"></script>
+</body>
+
+</html>
