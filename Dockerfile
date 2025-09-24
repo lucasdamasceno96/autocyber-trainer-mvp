@@ -1,6 +1,6 @@
 # --- ESTÁGIO 1: Build do Backend Go ---
 # Usamos uma imagem oficial do Go baseada no Alpine Linux, que é leve.
-FROM golang:1.21-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 # Define o diretório de trabalho dentro do container.
 WORKDIR /app
